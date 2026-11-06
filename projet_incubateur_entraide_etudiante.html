@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Projet incubateur — Entraide étudiante</title>
+<style>
+:root{
+  --bg:#f6f7fb; --card:#fff; --ink:#18202a; --muted:#667085;
+  --primary:#5b5ce2; --primary2:#7c3aed; --line:#e7e9f0;
+  --green:#18a673; --orange:#f59e0b; --red:#e05252;
+  --shadow:0 14px 40px rgba(31,35,50,.08); --r:22px;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+a{color:inherit}.wrap{max-width:1180px;margin:auto;padding:0 24px}
+.hero{padding:76px 0 54px;background:linear-gradient(135deg,#111827 0%,#242451 55%,#4f46a5 100%);color:white}
+.badge{display:inline-flex;padding:7px 12px;border:1px solid rgba(255,255,255,.2);border-radius:999px;background:rgba(255,255,255,.08);font-size:13px}
+h1{font-size:clamp(42px,7vw,78px);line-height:.98;margin:18px 0;letter-spacing:-.05em}
+.hero p{max-width:760px;color:#d8dcf0;font-size:20px}
+.tagline{font-size:25px;font-weight:800;margin-top:24px}
+section{padding:64px 0} h2{font-size:34px;line-height:1.1;margin:0 0 12px;letter-spacing:-.03em}
+.lead{color:var(--muted);max-width:780px;margin:0 0 30px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--shadow)}
+.card h3{margin:0 0 8px;font-size:20px}.muted{color:var(--muted)}
+.kpi{font-size:32px;font-weight:900}.small{font-size:13px;color:var(--muted)}
+.flow{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.node{background:#fff;border:1px solid var(--line);padding:15px 18px;border-radius:16px;box-shadow:0 8px 25px rgba(31,35,50,.05);font-weight:700}
+.arrow{color:var(--primary);font-weight:900;font-size:22px}
+.phone{background:#111827;border-radius:34px;padding:10px;box-shadow:var(--shadow);max-width:330px;margin:auto}
+.screen{background:#f8f9fd;border-radius:26px;overflow:hidden;min-height:580px}
+.top{padding:18px;background:#fff;border-bottom:1px solid var(--line);font-weight:900}
+.app{padding:16px}.pill{display:inline-block;padding:7px 10px;border-radius:999px;background:#ececff;color:#4747b8;font-size:12px;font-weight:800;margin:3px}
+.subject{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid var(--line)}
+.progress{height:8px;background:#ececf3;border-radius:9px;overflow:hidden}.progress i{display:block;height:100%;background:var(--primary);border-radius:9px}
+.btn{display:inline-block;border:0;background:var(--primary);color:white;padding:11px 15px;border-radius:12px;font-weight:800;text-decoration:none}
+.btn.alt{background:#ececff;color:#4b4bbd}.btn.ghost{background:#f0f1f5;color:#303744}
+.check{display:grid;grid-template-columns:28px 1fr;gap:10px;margin:12px 0}.check b{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:#e6f8f0;color:#12835b}
+.danger{border-left:4px solid var(--red)}.safe{border-left:4px solid var(--green)}.warn{border-left:4px solid var(--orange)}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:18px;overflow:hidden;border:1px solid var(--line)}
+th,td{text-align:left;padding:15px;border-bottom:1px solid var(--line);vertical-align:top}th{background:#f0f1f7}
+.timeline{border-left:3px solid #dfe0ef;margin-left:10px;padding-left:25px}
+.step{position:relative;margin:0 0 28px}.step:before{content:"";position:absolute;left:-36px;top:4px;width:15px;height:15px;border-radius:50%;background:var(--primary);box-shadow:0 0 0 5px #e9e9ff}
+footer{padding:45px 0;background:#111827;color:#cfd4e2}
+footer strong{color:#fff}
+@media(max-width:850px){.grid,.grid2{grid-template-columns:1fr}.hero{padding-top:52px}section{padding:48px 0}table{font-size:14px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+<div class="wrap">
+  <span class="badge">DOSSIER INCUBATEUR · VERSION MVP</span>
+  <h1>Les élèves s’aident.<br>La plateforme organise.</h1>
+  <p>Une communauté académique où chaque étudiant peut être aidé, aider ou faire les deux — par des élèves de son établissement ou de niveaux proches.</p>
+  <div class="tagline">« Tu maîtrises ce que quelqu’un cherche. Quelqu’un maîtrise ce qu’il te manque. »</div>
+</div>
+</header>
+
+<main>
+<section>
+<div class="wrap">
+<h2>1. Le problème</h2>
+<p class="lead">À l’école, les élèves n’ont pas tous les mêmes facilités. Pourtant, trouver rapidement un camarade capable d’expliquer une notion reste souvent informel : amis, groupe de classe, numéro personnel ou messages dispersés.</p>
+<div class="grid">
+  <div class="card"><h3>🔎 Trouver la bonne personne</h3><p class="muted">Qui maîtrise cette matière ? Qui est disponible ? Quelqu’un de mon niveau peut-il m’aider ?</p></div>
+  <div class="card"><h3>🤝 Créer une vraie entraide</h3><p class="muted">Passer d’un échange improvisé à une rencontre structurée : demande → créneau → session → avis.</p></div>
+  <div class="card"><h3>♻️ Valoriser le fait d’aider</h3><p class="muted">L’aide devient une contribution visible : crédits, réputation, badges et historique.</p></div>
+</div>
+</div>
+</section>
+
+<section style="background:#fff">
+<div class="wrap">
+<h2>2. La proposition</h2>
+<p class="lead">Un seul compte. Deux possibilités permanentes : <b>apprendre</b> et <b>transmettre</b>.</p>
+<div class="flow">
+  <div class="node">Créer son profil</div><div class="arrow">→</div>
+  <div class="node">Choisir son niveau</div><div class="arrow">→</div>
+  <div class="node">Déclarer ses matières</div><div class="arrow">→</div>
+  <div class="node">Être aidé / aider</div><div class="arrow">→</div>
+  <div class="node">Réserver une session</div><div class="arrow">→</div>
+  <div class="node">Gagner des crédits</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2>3. Règle de matching</h2>
+<p class="lead">Le niveau ne sert pas à classer les élèves : il sert à sécuriser les mises en relation.</p>
+<div class="grid2">
+<div class="card safe">
+<h3>↔ Entraide</h3>
+<p><b>Même niveau.</b><br>Exemple : deux étudiants d’Ingé 1. L’un est fort en maths, l’autre en anglais.</p>
+</div>
+<div class="card">
+<h3>⬆ Se faire aider</h3>
+<p><b>Même niveau ou niveau supérieur.</b><br>Un Ingé 1 peut demander de l’aide à un Ingé 2 ou Ingé 3, selon les règles de la plateforme.</p>
+</div>
+<div class="card">
+<h3>⬇ Aider</h3>
+<p><b>Même niveau ou niveau inférieur.</b><br>La personne qui aide doit déclarer la matière et son niveau de maîtrise.</p>
+</div>
+<div class="card warn">
+<h3>⚠ Important</h3>
+<p>Le niveau scolaire seul ne prouve pas qu’une personne sait enseigner. D’où l’intérêt de la vérification, des avis et de l’historique.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section style="background:#fff">
+<div class="wrap">
+<h2>4. Trois modes d’aide</h2>
+<div class="grid">
+<div class="card"><h3>💬 Message</h3><p>Question rapide, échange écrit, partage d’une ressource.</p><span class="pill">Gratuit · court</span></div>
+<div class="card"><h3>📞 Appel</h3><p>Session audio planifiée avec une personne disponible.</p><span class="pill">Créneau</span></div>
+<div class="card"><h3>🎥 Visio</h3><p>Session individuelle ou en petit groupe avec tableau partagé.</p><span class="pill">1 → 1</span><span class="pill">Groupe</span></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2>5. Crédits : le moteur de l’entraide</h2>
+<p class="lead">Le principe : <b>donner de la valeur pour pouvoir en recevoir</b>. Les chiffres ci-dessous sont des exemples à tester pendant le MVP, pas des tarifs définitifs.</p>
+<table>
+<thead><tr><th>Action</th><th>Exemple</th><th>Objectif</th></tr></thead>
+<tbody>
+<tr><td>Aider un étudiant</td><td>+ crédits / durée</td><td>Récompenser la contribution</td></tr>
+<tr><td>Recevoir de l’aide</td><td>− crédits / durée</td><td>Éviter la consommation illimitée</td></tr>
+<tr><td>Annulation abusive</td><td>Règle à définir</td><td>Protéger les deux parties</td></tr>
+<tr><td>Validation d’une session</td><td>Crédits débloqués après session</td><td>Limiter les faux échanges</td></tr>
+</tbody>
+</table>
+<br>
+<div class="grid2">
+<div class="card"><h3>🆓 Gratuit</h3><p>Créer un profil · demander de l’aide · aider · gagner des crédits · réserver selon son solde.</p></div>
+<div class="card"><h3>✨ Premium</h3><p>Exemple à tester : recharge de crédits, filtres avancés, historique étendu, priorisation de certaines demandes. À valider juridiquement et commercialement.</p></div>
+</div>
+</div>
+</section>
+
+<section style="background:#fff">
+<div class="wrap">
+<h2>6. Réputation & grades</h2>
+<p class="lead">Le grade doit refléter la contribution et la qualité des retours, pas seulement le nombre d’heures.</p>
+<div class="grid">
+<div class="card"><div class="kpi">01</div><h3>Nouveau membre</h3><p class="muted">Profil vérifié · premières sessions.</p></div>
+<div class="card"><div class="kpi">03</div><h3>Contributeur</h3><p class="muted">Historique régulier · bons retours.</p></div>
+<div class="card"><div class="kpi">06</div><h3>Mentor étudiant</h3><p class="muted">Contribution importante · réputation solide.</p></div>
+</div>
+<p class="small">Les seuils exacts doivent être déterminés après les premiers tests utilisateurs. Éviter un système qui pousse artificiellement à faire des sessions inutiles.</p>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2>7. Aperçu de l’application</h2>
+<p class="lead">Ces maquettes sont volontairement simples : elles montrent le parcours, pas le design final.</p>
+<div class="grid2">
+<div class="phone">
+<div class="screen">
+<div class="top">Mon profil 👋</div>
+<div class="app">
+<p><b>Bonjour Alex</b><br><span class="small">Ingé 1 · Réseaux & Sécurité</span></p>
+<span class="pill">+128 crédits</span><span class="pill">Mentor niveau 3</span>
+<h3>Mes matières</h3>
+<div class="subject"><span>Réseaux</span><b>Fort</b></div>
+<div class="subject"><span>Python</span><b>Fort</b></div>
+<div class="subject"><span>Anglais</span><b>À travailler</b></div>
+<h3>Besoin d’aide ?</h3>
+<a class="btn">Trouver un étudiant</a>
+</div></div></div>
+
+<div class="phone">
+<div class="screen">
+<div class="top">Trouver de l’aide 🔎</div>
+<div class="app">
+<span class="pill">Anglais</span><span class="pill">Ingé 1+</span>
+<div class="card" style="margin-top:14px;padding:16px">
+<b>Emma · Ingé 2</b><p class="small">Anglais · TOEIC · expression</p>
+<p>★★★★★ <b>4,9</b> · 18 sessions</p>
+<a class="btn">Voir disponibilités</a>
+</div>
+<div class="card" style="padding:16px">
+<b>Lucas · Ingé 1</b><p class="small">Anglais · grammaire</p>
+<p>★★★★★ <b>4,8</b> · 11 sessions</p>
+<a class="btn alt">Voir profil</a>
+</div>
+</div></div></div>
+</div>
+</div>
+</section>
+
+<section style="background:#fff">
+<div class="wrap">
+<h2>8. Calendrier & notifications</h2>
+<div class="grid2">
+<div class="card">
+<h3>📅 Calendrier</h3>
+<div class="subject"><span>18:00 · Anglais</span><b>Confirmé</b></div>
+<div class="subject"><span>19:00 · Réseaux</span><b>En attente</b></div>
+<div class="subject"><span>Demain · 17:30</span><b>Groupe</b></div>
+<p class="small">Réservation, confirmation, rappel, annulation, fin de session.</p>
+</div>
+<div class="card">
+<h3>🔔 Notifications utiles</h3>
+<div class="check"><b>✓</b><span>Une demande correspond à tes matières.</span></div>
+<div class="check"><b>✓</b><span>Ta session commence dans 30 minutes.</span></div>
+<div class="check"><b>✓</b><span>Ton aide a été évaluée.</span></div>
+<div class="check"><b>✓</b><span>Tu as gagné des crédits.</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2>9. Sécurité & bonnes pratiques</h2>
+<div class="grid2">
+<div class="card safe"><h3>🛡️ Identité</h3><p>Vérifier l’appartenance à l’établissement quand c’est possible. Limiter les informations publiques au strict nécessaire.</p></div>
+<div class="card safe"><h3>🚩 Signalement</h3><p>Bouton visible sur profil, message et session. Motifs structurés : harcèlement, contenu déplacé, fraude, comportement dangereux.</p></div>
+<div class="card safe"><h3>🔒 Vie privée</h3><p>Ne jamais afficher automatiquement téléphone, adresse personnelle ou autres coordonnées privées. Favoriser la messagerie interne.</p></div>
+<div class="card danger"><h3>⛔ Tolérance zéro</h3><p>Harcèlement, discrimination, menaces, doxxing, usurpation, fraude aux crédits et contournement des règles de sécurité.</p></div>
+<div class="card warn"><h3>👶 Mineurs</h3><p>Si la plateforme accepte des mineurs : règles spécifiques, consentement parental lorsque requis, modération renforcée et parcours adapté à l’âge.</p></div>
+<div class="card"><h3>🧑‍🏫 Limites</h3><p>Un étudiant n’est pas un professionnel. Ajouter une règle claire : aide académique ≠ conseil médical, juridique ou autre accompagnement professionnel.</p></div>
+</div>
+</div>
+</section>
+
+<section style="background:#fff">
+<div class="wrap">
+<h2>10. Règles communautaires</h2>
+<div class="grid">
+<div class="card"><h3>1 · Respect</h3><p>On explique sans rabaisser. On peut ne pas être d’accord sans attaquer.</p></div>
+<div class="card"><h3>2 · Honnêteté</h3><p>On indique son vrai niveau et ses matières. Pas de faux grades ni de faux avis.</p></div>
+<div class="card"><h3>3 · Ponctualité</h3><p>Une réservation est un engagement. Prévenir en cas d’empêchement.</p></div>
+<div class="card"><h3>4 · Pas de triche</h3><p>L’objectif est de comprendre. La plateforme ne doit pas devenir un service de fraude aux devoirs.</p></div>
+<div class="card"><h3>5 · Pas de spam</h3><p>Pas de publicité sauvage, sollicitations répétées ou messages copiés à grande échelle.</p></div>
+<div class="card"><h3>6 · Signalement</h3><p>Un doute ? Signaler. Les équipes examinent les abus selon une procédure claire.</p></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2>11. Architecture du produit</h2>
+<p class="lead">Pour l’incubateur, il est plus crédible de présenter un <b>MVP faisable</b> avant de promettre une application complète.</p>
+<div class="flow">
+<div class="node">Compte & vérification</div><div class="arrow">→</div>
+<div class="node">Profil matières</div><div class="arrow">→</div>
+<div class="node">Matching</div><div class="arrow">→</div>
+<div class="node">Messagerie</div><div class="arrow">→</div>
+<div class="node">Réservation</div><div class="arrow">→</div>
+<div class="node">Session</div><div class="arrow">→</div>
+<div class="node">Avis + crédits</div>
+</div>
+<br>
+<div class="grid">
+<div class="card"><h3>Frontend</h3><p>Web responsive en premier. App mobile ensuite si l’usage est validé.</p></div>
+<div class="card"><h3>Backend</h3><p>API + base de données pour comptes, matières, sessions, crédits, avis et signalements.</p></div>
+<div class="card"><h3>Temps réel</h3><p>Messagerie, notifications et visio via des services éprouvés plutôt que de tout développer soi-même au départ.</p></div>
+</div>
+</div>
+</section>
+
+<section style="background:#fff">
+<div class="wrap">
+<h2>12. Roadmap MVP</h2>
+<div class="timeline">
+<div class="step"><h3>Phase 0 · Validation — 1 à 2 semaines</h3><p>Interroger des étudiants. Mesurer les matières recherchées. Tester le concept de crédits. Identifier les règles de sécurité et les établissements pilotes.</p></div>
+<div class="step"><h3>Phase 1 · Prototype — 2 à 4 semaines</h3><p>Maquettes cliquables : inscription, profil, matières, recherche, profil d’un étudiant, réservation.</p></div>
+<div class="step"><h3>Phase 2 · MVP — 6 à 10 semaines</h3><p>Compte vérifié, matching simple, messagerie, calendrier, réservation, avis, crédits fictifs et signalement.</p></div>
+<div class="step"><h3>Phase 3 · Pilote EFREI</h3><p>Une communauté limitée. Objectif : observer si les étudiants trouvent réellement quelqu’un pour les aider et s’ils reviennent aider à leur tour.</p></div>
+<div class="step"><h3>Phase 4 · Monétisation</h3><p>Seulement après validation de l’usage : options premium, recharge de crédits ou autres modèles. Tester avant de généraliser.</p></div>
+<div class="step"><h3>Phase 5 · Déploiement</h3><p>Autres campus, SSO établissement, groupes d’étude, tableau blanc, statistiques et application mobile.</p></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2>13. Ce qui peut différencier le projet</h2>
+<p class="lead">L’idée générale n’est pas totalement nouvelle : plusieurs plateformes proposent déjà de l’entraide ou du tutorat entre étudiants. La présentation à l’incubateur doit donc défendre <b>l’angle précis</b>, pas prétendre être la première.</p>
+<table>
+<thead><tr><th>Solution existante</th><th>Ce qu’elle montre</th><th>Angle à travailler pour ton projet</th></tr></thead>
+<tbody>
+<tr><td>STU-D</td><td>Entraide étudiante, documents et communauté.</td><td>Se spécialiser sur la mise en relation structurée et les sessions d’aide.</td></tr>
+<tr><td>YTeach</td><td>Tutorat entre pairs organisé par des établissements.</td><td>Mettre l’accent sur une communauté étudiante autonome et les crédits.</td></tr>
+<tr><td>uSWAP</td><td>Échange de compétences entre étudiants avec système de points.</td><td>Construire un système centré sur les matières scolaires et la progression académique.</td></tr>
+<tr><td>Collegion</td><td>Demandes d’aide, sessions, calendrier et groupes dans des campus vérifiés.</td><td>Explorer le matching individuel + entraide réciproque + réputation.</td></tr>
+<tr><td>Tutlee / PASS</td><td>Tutorat étudiant structuré et réservation de séances.</td><td>Différencier le modèle gratuit/crédits et l’entraide entre niveaux.</td></tr>
+</tbody>
+</table>
+<p class="small">Ces exemples sont des solutions existantes repérées en septembre 2026 ; ils ne constituent pas un classement. Les fonctionnalités et conditions peuvent évoluer.</p>
+</div>
+</section>
+
+<section style="background:#111827;color:white">
+<div class="wrap">
+<h2>14. Pitch de 30 secondes</h2>
+<div class="card" style="background:#1c2332;border-color:#343b50;color:white">
+<p style="font-size:23px;line-height:1.5">« À l’école, personne n’est fort partout. Pourtant, trouver un étudiant capable de nous aider dépend souvent de nos amis ou de notre classe. Notre plateforme crée un réseau d’entraide entre élèves : chacun indique son niveau et ses matières, trouve quelqu’un qui peut l’aider, réserve une session et gagne des crédits en aidant à son tour. L’objectif est simple : transformer les connaissances des étudiants en une ressource collective, sécurisée et accessible. »</p>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<strong>Projet incubateur EFREI — document de cadrage MVP</strong>
+<p>Nom du projet : à définir · Version : septembre 2026 · Les tarifs, seuils de crédits et grades sont des hypothèses à tester.</p>
+</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PEERLY — Dossier Incubateur V1</title>
+<style>
+:root{--bg:#090b16;--panel:#111426;--panel2:#171a31;--text:#f7f8ff;--muted:#a9afc6;--purple:#8b5cf6;--purple2:#6d4aff;--line:#292d48;--ok:#7ee2b8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(135deg,#080a13,#101329 45%,#0a0c18);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+nav{position:sticky;top:0;z-index:10;display:flex;gap:8px;align-items:center;padding:12px 18px;background:#090b16e8;backdrop-filter:blur(14px);border-bottom:1px solid var(--line);overflow:auto}
+.brand{font-weight:900;letter-spacing:.08em;margin-right:10px}nav a{color:var(--muted);text-decoration:none;font-size:12px;padding:7px 9px;border-radius:10px;white-space:nowrap}nav a:hover{background:var(--panel2);color:white}
+.cover,.page{min-height:94vh;max-width:1120px;margin:auto;padding:70px 58px;display:flex;flex-direction:column;justify-content:center;border-bottom:1px solid #20243a}
+.cover h1{font-size:clamp(62px,12vw,150px);line-height:.85;margin:0;letter-spacing:-.07em}.cover h1 span{color:var(--purple)}.kicker{color:#c7b7ff;font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:13px}
+.cover .claim{font-size:clamp(25px,4vw,48px);max-width:900px;line-height:1.08;margin:28px 0 18px}.cover p{max-width:760px;color:var(--muted);font-size:18px;line-height:1.6}
+.pills{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}.pill{padding:10px 14px;background:#171a31;border:1px solid #303653;border-radius:999px;font-size:13px}
+.eyebrow{font-size:13px;color:#a991ff;font-weight:900;letter-spacing:.14em;text-transform:uppercase}h2{font-size:clamp(42px,6vw,72px);letter-spacing:-.045em;margin:12px 0 6px}h3{font-size:clamp(22px,3vw,34px);font-weight:650;color:#c8bcff;margin:0 0 26px;max-width:850px}.lead{font-size:19px;line-height:1.7;color:#c9cde0;max-width:900px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:28px;max-width:940px}.item{display:flex;gap:12px;align-items:flex-start;padding:17px;background:linear-gradient(180deg,#15182c,#101326);border:1px solid var(--line);border-radius:16px;color:#e9eaff;line-height:1.45}.check{color:var(--ok);font-weight:900}
+.callout{margin-top:30px;padding:22px;border-radius:18px;background:#17132a;border:1px solid #453678;max-width:940px}.callout strong{color:#d8ceff}
+.foot{margin-top:auto;padding-top:48px;display:flex;justify-content:space-between;gap:20px;color:#727994;font-size:11px}
+.refs{max-width:1120px;margin:auto;padding:55px 58px 90px}.refs h2{font-size:38px}.refs .ref{padding:14px 0;border-bottom:1px solid var(--line);color:#c9cde0}
+@media(max-width:700px){.cover,.page{padding:52px 22px;min-height:auto}.grid{grid-template-columns:1fr}nav{display:none}.foot{flex-direction:column}}
+@media print{body{background:white;color:#111}nav{display:none}.cover,.page{min-height:100vh;page-break-after:always;border:0;color:#111}h3,.lead,.item,.cover p{color:#333}.item{background:#fafafa;border-color:#ddd}.foot{color:#777}}
+</style></head>
+<body>
+<nav><span class="brand">PEERLY</span><a href="#s01">01</a><a href="#s02">02</a><a href="#s03">03</a><a href="#s04">04</a><a href="#s05">05</a><a href="#s06">06</a><a href="#s07">07</a><a href="#s08">08</a><a href="#s09">09</a><a href="#s10">10</a><a href="#s11">11</a><a href="#s12">12</a><a href="#s13">13</a><a href="#s14">14</a><a href="#s15">15</a><a href="#refs">Annexes</a></nav>
+<header class="cover">
+  <div class="kicker">Dossier incubateur · Version 1</div>
+  <h1>PEER<span>LY</span></h1>
+  <div class="claim">L’entraide entre élèves et étudiants, organisée autour de trois actions : apprendre, aider, s’entraider.</div>
+  <p>Document de présentation construit à partir de la Product Vision et du Delivery & Development Plan actuels. Les éléments marché, prix et partenariats non encore validés sont volontairement présentés comme des hypothèses à tester.</p>
+  <div class="pills"><span class="pill">EdTech</span><span class="pill">Pair-à-pair</span><span class="pill">Trust by design</span><span class="pill">Freemium</span><span class="pill">Campus B2B — vision</span></div>
+  <div class="callout"><strong>Pitch :</strong> PEERLY transforme les compétences de chaque élève en ressource pour les autres : j’apprends ce que je maîtrise moins, j’aide sur ce que je maîtrise, et je peux faire les deux dans une communauté structurée et sécurisée.</div>
+</header>
+
+    <section class="page" id="s01">
+      <div class="eyebrow">01 / 15</div>
+      <h2>Le constat</h2>
+      <h3>L’entraide existe déjà. PEERLY veut l’organiser.</h3>
+      <p class="lead">Les élèves et étudiants n’ont pas les mêmes forces. L’un peut maîtriser les mathématiques et avoir besoin d’aide en anglais ; un autre peut avoir le profil inverse. Aujourd’hui, cette entraide existe de manière informelle, mais elle est dispersée entre amis, groupes de classe, messageries et plateformes généralistes.</p>
+      <div class="grid">
+        <div class="item"><span class="check">✓</span><span>Besoin d’une aide humaine et contextualisée</span></div><div class="item"><span class="check">✓</span><span>Difficulté à trouver la bonne personne au bon moment</span></div><div class="item"><span class="check">✓</span><span>Organisation des disponibilités souvent artisanale</span></div><div class="item"><span class="check">✓</span><span>Confiance et sécurité indispensables lorsque l’on met des personnes en relation</span></div>
+      </div>
+      <div class="foot"><span>PEERLY — Dossier incubateur V1</span><span>Hypothèses à valider lorsque indiqué</span></div>
+    </section>
+    <section class="page" id="s02">
+      <div class="eyebrow">02 / 15</div>
+      <h2>La solution</h2>
+      <h3>Apprendre. Aider. S’entraider.</h3>
+      <p class="lead">PEERLY est une plateforme d’entraide entre pairs. Un membre peut demander de l’aide, proposer son aide ou créer une entraide réciproque. Le produit organise la découverte des profils, les demandes, les disponibilités, les échanges, les sessions et les retours après session.</p>
+      <div class="grid">
+        <div class="item"><span class="check">✓</span><span>J’apprends : je cherche une personne adaptée à mon besoin</span></div><div class="item"><span class="check">✓</span><span>J’aide : je mets mes compétences au service d’autres membres</span></div><div class="item"><span class="check">✓</span><span>Entraide : chacun apporte une compétence à l’autre</span></div><div class="item"><span class="check">✓</span><span>Communauté : questions courtes et échanges ouverts</span></div>
+      </div>
+      <div class="foot"><span>PEERLY — Dossier incubateur V1</span><span>Hypothèses à valider lorsque indiqué</span></div>
+    </section>
+    <section class="page" id="s03">
+      <div class="eyebrow">03 / 15</div>
+      <h2>Expérience produit</h2>
+      <h3>Un parcours simple, de l’intention à la session.</h3>
+      <p class="lead">Le prototype de référence matérialise le parcours complet : onboarding, profil, demandes, recherche, messagerie, calendrier, sessions, avis, contributions, Trust et Campus. La version mobile sert de référence UX pour une expérience plus native et compacte.</p>
+      <div class="grid">
+        <div class="item"><span class="check">✓</span><span>Créer son profil et indiquer ses matières</span></div><div class="item"><span class="check">✓</span><span>Publier une demande ou trouver un membre</span></div><div class="item"><span class="check">✓</span><span>Proposer / négocier un créneau</span></div><div class="item"><span class="check">✓</span><span>Échanger par message, appel ou visio</span></div><div class="item"><span class="check">✓</span><span>Réaliser la session puis laisser un avis</span></div>
+      </div>
+      <div class="foot"><span>PEERLY — Dossier incubateur V1</span><span>Hypothèses à valider lorsque indiqué</span></div>
+    </section>
+    <section class="page" id="s04">
+      <div class="eyebrow">04 / 15</div>
+      <h2>Différenciation</h2>
+      <h3>PEERLY n’essaie pas de remplacer les professeurs ni l’IA.</h3>
+      <p class="lead">La proposition de valeur est l’entraide humaine structurée entre pairs : des personnes qui vivent des programmes, difficultés et méthodes proches, avec des outils pour se trouver, s’organiser et construire une réputation. L’IA peut compléter l’expérience, mais elle n’est pas le cœur de la relation.</p>
+      <div class="grid">
+        <div class="item"><span class="check">✓</span><span>Pair-à-pair au centre du produit</span></div><div class="item"><span class="check">✓</span><span>Trois intentions visibles : apprendre, aider, entraide</span></div><div class="item"><span class="check">✓</span><span>Disponibilités + demandes + matching dans le même environnement</span></div><div class="item"><span class="check">✓</span><span>Trust et réputation séparés</span></div><div class="item"><span class="check">✓</span><span>Extension Campus pour les établissements partenaires</span></div>
+      </div>
+      <div class="foot"><span>PEERLY — Dossier incubateur V1</span><span>Hypothèses à valider lorsque indiqué</span></div>
+    </section>
+    <section class="page" id="s05">
+      <div class="eyebrow">05 / 15</div>
+      <h2>PEERLY Trust</h2>
+      <h3>La confiance est une infrastructure, pas un badge marketing.</h3>
+      <p class="lead">La Product Vision distingue explicitement identité, âge, statut étudiant, Campus et réputation. Une identité vérifiée ne signifie pas qu’un membre est automatiquement fiable ou recommandé. Les avis, sessions honorées et contributions restent des signaux séparés.</p>
+      <div class="grid">
+        <div class="item"><span class="check">✓</span><span>Email vérifié</span></div><div class="item"><span class="check">✓</span><span>Identité / âge : parcours de vérification prévu</span></div><div class="item"><span class="check">✓</span><span>Statut étudiant distinct de l’email académique</span></div><div class="item"><span class="check">✓</span><span>Blocage, signalement, sanctions graduées et recours</span></div><div class="item"><span class="check">✓</span><span>Minimisation des données et badges générés par le système</span></div>
+      </div>
+      <div class="foot"><span>PEERLY — Dossier incubateur V1</span><span>Hypothèses à valider lorsque indiqué</span></div>
+    </section>
+    <section class="page" id="s06">
+      <div class="eyebrow">06 / 15</div>
+      <h2>Utilisateurs &amp; marché</h2>
+      <h3>Commencer petit pour apprendre vite.</h3>
+      <p class="lead">La vision couvre à terme plusieurs niveaux scolaires, mais le lancement ne doit pas viser toute la France d’un coup. Le dossier propose un pilote fermé sur une population limitée, puis une extension progressive selon les résultats.</p>
+      <div class="grid">
+        <div class="item"><span class="check">✓</span><span>Cible de départ à choisir et valider par étude terrain</span></div><div class="item"><span class="check">✓</span><span>Pilote fermé avant ouverture large</span></div><div class="item"><span class="check">✓</span><span>Mesurer demande d’aide ET volonté d’aider</span></div><div class="item"><span class="check">✓</span><span>Élargissement uniquement après preuve d’usage</span></div>
+      </div>
+      <div class="foot"><span>PEERLY — Dossier incubateur V1</span><span>Hypothèses à valider lorsque indiqué</span></div>
+    </section>
+    <section class="page" id="s07">
+      <div class="eyebrow">07 / 15</div>
+      <h2>Validation marché</h2>
+      <h3>Ce qui reste à prouver avant d’investir lourdement.</h3>
+      <p class="lead">Le prototype démontre la vision produit ; il ne démontre pas encore la demande marché. La prochaine étape est donc une étude utilisateur structurée, avec questionnaire et entretiens, puis un pilote permettant de mesurer les comportements réels.</p>
+      <div class="grid">
+        <div class="item"><span class="check">✓</span><span>50–200 réponses au questionnaire comme premier objectif de travail</span></div><div class="item"><span class="check">✓</span><span>Entretiens qualitatifs avec élèves / étudiants</span></div><div class="item"><span class="check">✓</span><span>Tester les freins : confiance, temps, gêne, prix, disponibilité</span></div><div class="item"><span class="check">✓</span><span>Mesurer activation, demandes, matching, sessions réalisées et rétention</span></div>
+      </div>
+      <div class="foot"><span>PEERLY — Dossier incubateur V1</span><span>Hypothèses à valider lorsque indiqué</span></div>
+    </section>
+    <section class="page" id="s08">
+      <div class="eyebrow">08 / 15</div>
+      <h2>Modèle économique</h2>
+      <h3>Freemium B2C + extension Campus B2B, à valider.</h3>
+      <p class="lead">La vision actuelle prévoit un socle gratuit, une offre PEERLY+ pour les utilisateurs qui souhaitent davantage de capacité ou de confort, et PEERLY Campus comme extension destinée aux établissements partenaires. Les tarifs et limites restent des hypothèses à tester, pas des chiffres définitifs.</p>
+      <div class="grid">
+        <div class="item"><span class="check">✓</span><span>Gratuit : conserver une vraie utilité sans paiement</span></div><div class="item"><span class="check">✓</span><span>PEERLY+ : abonnement / capacité supplémentaire à définir par tests</span></div><div class="item"><span class="check">✓</span><span>Campus : licence établissement et espace vérifié</span></div><div class="item"><span class="check">✓</span><span>Éviter de transformer les contributions en monnaie de compétition</span></div>
+      </div>
+      <div class="foot"><span>PEERLY — Dossier incubateur V1</span><span>Hypothèses à valider lorsque indiqué</span></div>
+    </section>
+    <section class="page" id="s09">
+      <div class="eyebrow">09 / 15</div>
+      <h2>Contributions</h2>
+      <h3>Valoriser l’aide sans créer une course aux récompenses.</h3>
+      <p class="lead">Le système Contributions distingue recommandations, classements de valorisation et progression personnelle. Le classement n’accorde aucun avantage particulier et n’est pas affiché comme un rang public permanent sur les profils.</p>
+      <div class="grid">
+        <div class="item"><span class="check">✓</span><span>Recommandés : qualité et fiabilité</span></div><div class="item"><span class="check">✓</span><span>Classement général et par matière : repère de contribution</span></div><div class="item"><span class="check">✓</span><span>Aucune récompense liée au rang</span></div><div class="item"><span class="check">✓</span><span>Progression personnelle et paliers séparés</span></div><div class="item"><span class="check">✓</span><span>Garde-fous contre le spam et la recherche de points</span></div>
+      </div>
+      <div class="foot"><span>PEERLY — Dossier incubateur V1</span><span>Hypothèses à valider lorsque indiqué</span></div>
+    </section>
+    <section class="page" id="s10">
+      <div class="eyebrow">10 / 15</div>
+      <h2>PEERLY Campus</h2>
+      <h3>Une extension vérifiée, pas une condition pour utiliser PEERLY.</h3>
+      <p class="lead">Campus est conçu comme une extension pour un établissement partenaire. L’utilisateur général peut utiliser PEERLY sans Campus. L’accès au contenu interne d’un Campus est réservé aux membres vérifiés de cet établissement.</p>
+      <div class="grid">
+        <div class="item"><span class="check">✓</span><span>Email académique + statut étudiant comme contrôles distincts</span></div><div class="item"><span class="check">✓</span><span>Annonces, groupes, événements et ressources réservés au Campus</span></div><div class="item"><span class="check">✓</span><span>Tutorat / entraide au sein de l’établissement</span></div><div class="item"><span class="check">✓</span><span>Aucun partenariat réel n’est revendiqué par le prototype</span></div>
+      </div>
+      <div class="foot"><span>PEERLY — Dossier incubateur V1</span><span>Hypothèses à valider lorsque indiqué</span></div>
+    </section>
+    <section class="page" id="s11">
+      <div class="eyebrow">11 / 15</div>
+      <h2>MVP</h2>
+      <h3>Construire le cœur avant la vision complète.</h3>
+      <p class="lead">Le Delivery &amp; Development Plan sépare prototype, MVP et vision. Le MVP doit d’abord rendre possible une boucle complète et sûre : compte → profil → besoin → découverte → échange → session → avis, avec notifications, blocage et signalement.</p>
+      <div class="grid">
+        <div class="item"><span class="check">✓</span><span>P0 : Auth, onboarding, profils et Trust minimal</span></div><div class="item"><span class="check">✓</span><span>P0 : Demandes, Trouver, disponibilités et calendrier</span></div><div class="item"><span class="check">✓</span><span>P0 : Messagerie, sessions, avis, notifications</span></div><div class="item"><span class="check">✓</span><span>P0 : support, modération et administration minimale</span></div><div class="item"><span class="check">✓</span><span>P1/P2 : engagement avancé, Premium, Campus et scale</span></div>
+      </div>
+      <div class="foot"><span>PEERLY — Dossier incubateur V1</span><span>Hypothèses à valider lorsque indiqué</span></div>
+    </section>
+    <section class="page" id="s12">
+      <div class="eyebrow">12 / 15</div>
+      <h2>Roadmap</h2>
+      <h3>Prototype → validation → MVP → pilote → extension.</h3>
+      <p class="lead">Le projet ne doit pas passer directement du prototype à une plateforme nationale. Chaque étape doit réduire un risque : désirabilité, sécurité, faisabilité, modèle économique puis capacité à passer à l’échelle.</p>
+      <div class="grid">
+        <div class="item"><span class="check">✓</span><span>1. Prototype de référence</span></div><div class="item"><span class="check">✓</span><span>2. Étude marché + entretiens</span></div><div class="item"><span class="check">✓</span><span>3. Spécification MVP et cadrage juridique</span></div><div class="item"><span class="check">✓</span><span>4. Développement MVP</span></div><div class="item"><span class="check">✓</span><span>5. Pilote fermé et mesure</span></div><div class="item"><span class="check">✓</span><span>6. Itérations puis Campus / expansion</span></div>
+      </div>
+      <div class="foot"><span>PEERLY — Dossier incubateur V1</span><span>Hypothèses à valider lorsque indiqué</span></div>
+    </section>
+    <section class="page" id="s13">
+      <div class="eyebrow">13 / 15</div>
+      <h2>Équipe</h2>
+      <h3>Une vision claire des compétences nécessaires.</h3>
+      <p class="lead">Le projet peut être porté initialement par son fondateur, mais un produit réel nécessitera plusieurs compétences : produit, UX/UI, développement, infrastructure, sécurité, modération et accompagnement juridique. Le Delivery Plan permet de répartir ces responsabilités sans recruter toute l’équipe dès le premier jour.</p>
+      <div class="grid">
+        <div class="item"><span class="check">✓</span><span>Product / fondateur</span></div><div class="item"><span class="check">✓</span><span>UX/UI design</span></div><div class="item"><span class="check">✓</span><span>Frontend web/mobile</span></div><div class="item"><span class="check">✓</span><span>Backend/API et base de données</span></div><div class="item"><span class="check">✓</span><span>DevOps / sécurité</span></div><div class="item"><span class="check">✓</span><span>Trust &amp; Safety / support</span></div><div class="item"><span class="check">✓</span><span>Juridique / RGPD en accompagnement</span></div>
+      </div>
+      <div class="foot"><span>PEERLY — Dossier incubateur V1</span><span>Hypothèses à valider lorsque indiqué</span></div>
+    </section>
+    <section class="page" id="s14">
+      <div class="eyebrow">14 / 15</div>
+      <h2>Ce que nous demandons à l’incubateur</h2>
+      <h3>Accélérer la validation avant d’accélérer le développement.</h3>
+      <p class="lead">L’objectif de l’accompagnement n’est pas seulement d’obtenir de l’argent. PEERLY a surtout besoin d’un cadre pour valider son marché, cadrer Trust &amp; Safety, tester le modèle économique, rencontrer des établissements et préparer un pilote crédible.</p>
+      <div class="grid">
+        <div class="item"><span class="check">✓</span><span>Mentorat produit et entrepreneurial</span></div><div class="item"><span class="check">✓</span><span>Aide à l’étude de marché</span></div><div class="item"><span class="check">✓</span><span>Mise en relation avec utilisateurs / établissements</span></div><div class="item"><span class="check">✓</span><span>Accompagnement juridique, RGPD et mineurs</span></div><div class="item"><span class="check">✓</span><span>Challenge du business model</span></div><div class="item"><span class="check">✓</span><span>Aide au financement et à la constitution de l’équipe</span></div>
+      </div>
+      <div class="foot"><span>PEERLY — Dossier incubateur V1</span><span>Hypothèses à valider lorsque indiqué</span></div>
+    </section>
+    <section class="page" id="s15">
+      <div class="eyebrow">15 / 15</div>
+      <h2>Vision</h2>
+      <h3>Faire de l’entraide entre pairs un réflexe simple, sûr et utile.</h3>
+      <p class="lead">PEERLY veut transformer une pratique déjà naturelle — demander de l’aide à quelqu’un qui comprend le sujet — en une expérience organisée, accessible et digne de confiance. Le prochain objectif n’est pas de tout construire : c’est de prouver que les utilisateurs reviennent parce que l’entraide leur apporte une valeur que les outils existants ne couvrent pas seuls.</p>
+      <div class="grid">
+        <div class="item"><span class="check">✓</span><span>Prototype Desktop fonctionnel</span></div><div class="item"><span class="check">✓</span><span>Référence UX Mobile</span></div><div class="item"><span class="check">✓</span><span>Product Vision</span></div><div class="item"><span class="check">✓</span><span>Delivery &amp; Development Plan</span></div><div class="item"><span class="check">✓</span><span>Prochaine preuve attendue : validation terrain</span></div>
+      </div>
+      <div class="foot"><span>PEERLY — Dossier incubateur V1</span><span>Hypothèses à valider lorsque indiqué</span></div>
+    </section>
+<section class="refs" id="refs">
+<h2>Annexes & preuves de préparation</h2>
+<div class="ref"><b>Prototype Desktop / Web V6.2.5</b> — référence fonctionnelle.</div>
+<div class="ref"><b>Prototype Mobile V1.1</b> — référence UX mobile.</div>
+<div class="ref"><b>Product Vision V6 — Trust & Contribution</b> — règles produit, Trust, Campus et vision long terme.</div>
+<div class="ref"><b>Delivery & Development Plan V1</b> — EPICs, MVP, priorités et organisation du développement.</div>
+<div class="callout"><strong>À compléter avant jury :</strong> résultats d’étude marché, matrice concurrence vérifiée, hypothèses tarifaires testées, budget prévisionnel, identité du porteur / équipe, besoins précis auprès de l’incubateur et QR code vers une démo hébergée.</div>
+</section>
+</body></html>
